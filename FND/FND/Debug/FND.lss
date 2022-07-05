@@ -1,0 +1,275 @@
+
+FND.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000008e  00800100  0000014c  000001c0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000014c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  0000024e  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000280  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000020  00000000  00000000  000002c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000009d6  00000000  00000000  000002e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000884  00000000  00000000  00000cb6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002ec  00000000  00000000  0000153a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000024  00000000  00000000  00001828  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000424  00000000  00000000  0000184c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000115  00000000  00000000  00001c70  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000028  00000000  00000000  00001d85  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	58 c0       	rjmp	.+176    	; 0xb6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	56 c0       	rjmp	.+172    	; 0xb6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	54 c0       	rjmp	.+168    	; 0xb6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	52 c0       	rjmp	.+164    	; 0xb6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	50 c0       	rjmp	.+160    	; 0xb6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	4e c0       	rjmp	.+156    	; 0xb6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	4c c0       	rjmp	.+152    	; 0xb6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	4a c0       	rjmp	.+148    	; 0xb6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	48 c0       	rjmp	.+144    	; 0xb6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	46 c0       	rjmp	.+140    	; 0xb6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	44 c0       	rjmp	.+136    	; 0xb6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	42 c0       	rjmp	.+132    	; 0xb6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	40 c0       	rjmp	.+128    	; 0xb6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	3e c0       	rjmp	.+124    	; 0xb6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	3c c0       	rjmp	.+120    	; 0xb6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	3a c0       	rjmp	.+116    	; 0xb6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	38 c0       	rjmp	.+112    	; 0xb6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	36 c0       	rjmp	.+108    	; 0xb6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	34 c0       	rjmp	.+104    	; 0xb6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	32 c0       	rjmp	.+100    	; 0xb6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	30 c0       	rjmp	.+96     	; 0xb6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	2e c0       	rjmp	.+92     	; 0xb6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	2c c0       	rjmp	.+88     	; 0xb6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	2a c0       	rjmp	.+84     	; 0xb6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	28 c0       	rjmp	.+80     	; 0xb6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	26 c0       	rjmp	.+76     	; 0xb6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	24 c0       	rjmp	.+72     	; 0xb6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	22 c0       	rjmp	.+68     	; 0xb6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	20 c0       	rjmp	.+64     	; 0xb6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	1e c0       	rjmp	.+60     	; 0xb6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	1c c0       	rjmp	.+56     	; 0xb6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	1a c0       	rjmp	.+52     	; 0xb6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	18 c0       	rjmp	.+48     	; 0xb6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	16 c0       	rjmp	.+44     	; 0xb6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ec e4       	ldi	r30, 0x4C	; 76
+  a0:	f1 e0       	ldi	r31, 0x01	; 1
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	ae 38       	cpi	r26, 0x8E	; 142
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	02 d0       	rcall	.+4      	; 0xb8 <main>
+  b4:	49 c0       	rjmp	.+146    	; 0x148 <_exit>
+
+000000b6 <__bad_interrupt>:
+  b6:	a4 cf       	rjmp	.-184    	; 0x0 <__vectors>
+
+000000b8 <main>:
+	
+// ==================================================================================
+	
+int main()
+{
+	DDRB = 0xFF; // O fnd
+  b8:	8f ef       	ldi	r24, 0xFF	; 255
+  ba:	87 bb       	out	0x17, r24	; 23
+	DDRA |= 0x0F; // O unit
+  bc:	8a b3       	in	r24, 0x1a	; 26
+  be:	8f 60       	ori	r24, 0x0F	; 15
+  c0:	8a bb       	out	0x1a, r24	; 26
+	
+	DDRC &= ~0x03; // I button
+  c2:	84 b3       	in	r24, 0x14	; 20
+  c4:	8c 7f       	andi	r24, 0xFC	; 252
+  c6:	84 bb       	out	0x14, r24	; 20
+	PORTC |= 0x3; // built-in pullup
+  c8:	85 b3       	in	r24, 0x15	; 21
+  ca:	83 60       	ori	r24, 0x03	; 3
+  cc:	85 bb       	out	0x15, r24	; 21
+	
+	const char* o = "HELLO it is daedeog HELL";
+	const char* cur = o;
+	
+	uint8_t delta = 0;
+  ce:	60 e0       	ldi	r22, 0x00	; 0
+	
+	DDRC &= ~0x03; // I button
+	PORTC |= 0x3; // built-in pullup
+	
+	const char* o = "HELLO it is daedeog HELL";
+	const char* cur = o;
+  d0:	a0 e0       	ldi	r26, 0x00	; 0
+  d2:	b1 e0       	ldi	r27, 0x01	; 1
+	
+	uint8_t delta = 0;
+	while (1) {
+		u8 in = ~PINC;
+  d4:	83 b3       	in	r24, 0x13	; 19
+  d6:	80 95       	com	r24
+		delta = (delta & ~((in >> 1) ^ in) | ~(in >> 1) & in) & 1;
+  d8:	98 2f       	mov	r25, r24
+  da:	96 95       	lsr	r25
+  dc:	28 2f       	mov	r18, r24
+  de:	29 27       	eor	r18, r25
+  e0:	20 95       	com	r18
+  e2:	62 23       	and	r22, r18
+  e4:	90 95       	com	r25
+  e6:	89 23       	and	r24, r25
+  e8:	86 2b       	or	r24, r22
+  ea:	68 2f       	mov	r22, r24
+  ec:	61 70       	andi	r22, 0x01	; 1
+		cur += delta;
+  ee:	a6 0f       	add	r26, r22
+  f0:	b1 1d       	adc	r27, r1
+		
+		if (!cur[4]) cur = o;
+  f2:	14 96       	adiw	r26, 0x04	; 4
+  f4:	8c 91       	ld	r24, X
+  f6:	14 97       	sbiw	r26, 0x04	; 4
+  f8:	81 11       	cpse	r24, r1
+  fa:	02 c0       	rjmp	.+4      	; 0x100 <main+0x48>
+  fc:	a0 e0       	ldi	r26, 0x00	; 0
+  fe:	b1 e0       	ldi	r27, 0x01	; 1
+		
+		for (int i = 0; i < 125; i++)
+ 100:	20 e0       	ldi	r18, 0x00	; 0
+ 102:	30 e0       	ldi	r19, 0x00	; 0
+ 104:	1d c0       	rjmp	.+58     	; 0x140 <main+0x88>
+	}
+}
+static inline void fnd4_str(volatile u8* dst, volatile u8* nth, const char* src) {
+	
+	for (u8 i = 1; i != nb(4); i <<= 1) {
+		*nth = (*nth & ~0x0F) | i;
+ 106:	8b b3       	in	r24, 0x1b	; 27
+ 108:	80 7f       	andi	r24, 0xF0	; 240
+ 10a:	89 2b       	or	r24, r25
+ 10c:	8b bb       	out	0x1b, r24	; 27
+		*dst = ~ascii[*src++];
+ 10e:	af 01       	movw	r20, r30
+ 110:	4f 5f       	subi	r20, 0xFF	; 255
+ 112:	5f 4f       	sbci	r21, 0xFF	; 255
+ 114:	e0 81       	ld	r30, Z
+ 116:	f0 e0       	ldi	r31, 0x00	; 0
+ 118:	e7 5e       	subi	r30, 0xE7	; 231
+ 11a:	fe 4f       	sbci	r31, 0xFE	; 254
+ 11c:	80 81       	ld	r24, Z
+ 11e:	80 95       	com	r24
+ 120:	88 bb       	out	0x18, r24	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 122:	ef e3       	ldi	r30, 0x3F	; 63
+ 124:	ff e1       	ldi	r31, 0x1F	; 31
+ 126:	31 97       	sbiw	r30, 0x01	; 1
+ 128:	f1 f7       	brne	.-4      	; 0x126 <main+0x6e>
+ 12a:	00 c0       	rjmp	.+0      	; 0x12c <main+0x74>
+ 12c:	00 00       	nop
+		_delay_ms(2);
+	}
+}
+static inline void fnd4_str(volatile u8* dst, volatile u8* nth, const char* src) {
+	
+	for (u8 i = 1; i != nb(4); i <<= 1) {
+ 12e:	99 0f       	add	r25, r25
+		*nth = (*nth & ~0x0F) | i;
+		*dst = ~ascii[*src++];
+ 130:	fa 01       	movw	r30, r20
+ 132:	02 c0       	rjmp	.+4      	; 0x138 <main+0x80>
+ 134:	fd 01       	movw	r30, r26
+ 136:	91 e0       	ldi	r25, 0x01	; 1
+		_delay_ms(2);
+	}
+}
+static inline void fnd4_str(volatile u8* dst, volatile u8* nth, const char* src) {
+	
+	for (u8 i = 1; i != nb(4); i <<= 1) {
+ 138:	90 31       	cpi	r25, 0x10	; 16
+ 13a:	29 f7       	brne	.-54     	; 0x106 <main+0x4e>
+		delta = (delta & ~((in >> 1) ^ in) | ~(in >> 1) & in) & 1;
+		cur += delta;
+		
+		if (!cur[4]) cur = o;
+		
+		for (int i = 0; i < 125; i++)
+ 13c:	2f 5f       	subi	r18, 0xFF	; 255
+ 13e:	3f 4f       	sbci	r19, 0xFF	; 255
+ 140:	2d 37       	cpi	r18, 0x7D	; 125
+ 142:	31 05       	cpc	r19, r1
+ 144:	bc f3       	brlt	.-18     	; 0x134 <main+0x7c>
+ 146:	c6 cf       	rjmp	.-116    	; 0xd4 <main+0x1c>
+
+00000148 <_exit>:
+ 148:	f8 94       	cli
+
+0000014a <__stop_program>:
+ 14a:	ff cf       	rjmp	.-2      	; 0x14a <__stop_program>
