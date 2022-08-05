@@ -17,58 +17,58 @@
 // backward: 반시계
 
 
-// 1상 여자 방식
-//int main() {
-	//DDRC = 0x0F;
-	//PORTC = 0x0F;
-	//uint8_t s = 0;
-	//
-	////loop {
-		////PORTC = step_forward(s);
-		////_delay_ms(2);
-	////}
-	//
+ 1상 여자 방식
+int main() {
+	DDRC = 0x0F;
+	PORTC = 0x0F;
+	uint8_t s = 0;
+	
 	//loop {
-		//for (int i = 0; i < 2037; i++) {
-			//PORTC = step_forward(s);
-			//_delay_ms(2);
-		//}
-		//
-		//_delay_ms(1000);
-		//
-		//for (int i = 0; i < 2037; i++) {
-			//PORTC = step_backward(s);
-			//_delay_ms(2);
-		//}
-		//
-		//_delay_ms(1000);
+		//PORTC = step_forward(s);
+		//_delay_ms(2);
 	//}
-	//
-	////loop {
-		////PORTC = nth(2);
-		////_delay_ms(5);
-		////PORTC = nth(0);
-		////_delay_ms(5);
-	////}	
-	//
-	////loop {
-		////PORTC = nth(3);
-		////_delay_ms(5);
-		////PORTC = nth(2);
-		////_delay_ms(5);
-		////PORTC = nth(1);
-		////_delay_ms(5);
-		////PORTC = nth(0);
-		////_delay_ms(5);
-	////}
-	//
-	////for (int i = 0; i < 2037; i++) {
-		////PORTC = step_forward(s);
-		////_delay_ms(2);
-	////}
-	//
-	//loop;
-//}
+	
+	loop {
+		for (int i = 0; i < 2037; i++) {
+			PORTC = step_forward(s);
+			_delay_ms(2);
+		}
+		
+		_delay_ms(1000);
+		
+		for (int i = 0; i < 2037; i++) {
+			PORTC = step_backward(s);
+			_delay_ms(2);
+		}
+		
+		_delay_ms(1000);
+	}
+	
+	//loop {
+		//PORTC = nth(2);
+		//_delay_ms(5);
+		//PORTC = nth(0);
+		//_delay_ms(5);
+	//}	
+	
+	//loop {
+		//PORTC = nth(3);
+		//_delay_ms(5);
+		//PORTC = nth(2);
+		//_delay_ms(5);
+		//PORTC = nth(1);
+		//_delay_ms(5);
+		//PORTC = nth(0);
+		//_delay_ms(5);
+	//}
+	
+	//for (int i = 0; i < 2037; i++) {
+		//PORTC = step_forward(s);
+		//_delay_ms(2);
+	//}
+	
+	loop;
+}
 
 
 // 74595(SIPO Resgister)를 사용하여 제어========================================
