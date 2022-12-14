@@ -1,4 +1,4 @@
-.include "m128adef.inc"
+/*.include "m128adef.inc"
 
 .def mask		= r16
 .def ledR		= r17
@@ -33,4 +33,4 @@ iLoop:
 	dec		oLoopR
 	brne	oLoop
 
-	rjmp	start
+	rjmp	start*/

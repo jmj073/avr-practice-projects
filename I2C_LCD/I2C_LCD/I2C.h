@@ -15,9 +15,9 @@
 #define I2C_SCL	PD0
 #define I2C_SDA PD1
 
-#define SLAVE_ADDR	0x27<1
-#define CLCD_W		SLAVE_ADDR+0
-#define CLCD_R		SLAVE_ADDR+1
+#define SLAVE_ADDR	(0x27 << 1)
+#define CLCD_W		(SLAVE_ADDR + 0)
+#define CLCD_R		(SLAVE_ADDR + 1)
 
 void I2C_Init(void);
 void I2C_Start(void);

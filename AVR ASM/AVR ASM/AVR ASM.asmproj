@@ -15,7 +15,7 @@
     <Name>AVR ASM</Name>
     <RootNamespace>AVR ASM</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
-    <EntryFile>$(MSBuildProjectDirectory)\[03]LED BLINK.asm</EntryFile>
+    <EntryFile>$(MSBuildProjectDirectory)\multiplication.asm</EntryFile>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
@@ -40,15 +40,16 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.ispmk2</avrtool>
-    <avrtoolserialnumber>000200216820</avrtoolserialnumber>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtoolserialnumber>
+    </avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x1E9702</avrdeviceexpectedsignature>
     <avrtoolinterface>ISP</avrtoolinterface>
-    <avrtoolinterfaceclock>125000</avrtoolinterfaceclock>
+    <avrtoolinterfaceclock>0</avrtoolinterfaceclock>
     <com_atmel_avrdbg_tool_ispmk2>
       <ToolOptions>
         <InterfaceProperties>
-          <IspClock>125000</IspClock>
+          <IspClock>0</IspClock>
         </InterfaceProperties>
         <InterfaceName>ISP</InterfaceName>
       </ToolOptions>
@@ -57,16 +58,15 @@
       <ToolName>AVRISP mkII</ToolName>
     </com_atmel_avrdbg_tool_ispmk2>
     <com_atmel_avrdbg_tool_simulator>
-      <ToolOptions xmlns="">
+      <ToolOptions>
         <InterfaceProperties>
         </InterfaceProperties>
-        <InterfaceName>
-        </InterfaceName>
+        <InterfaceName>ISP</InterfaceName>
       </ToolOptions>
-      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
-      <ToolNumber xmlns="">
+      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber>
       </ToolNumber>
-      <ToolName xmlns="">Simulator</ToolName>
+      <ToolName>Simulator</ToolName>
     </com_atmel_avrdbg_tool_simulator>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -99,6 +99,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="factorial.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="multiplication.asm">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SRAM array copy.asm">

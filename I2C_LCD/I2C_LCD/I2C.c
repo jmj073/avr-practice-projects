@@ -13,12 +13,14 @@ void I2C_Init(void)
 	//TWBR = 32;	//200khz 의미
 	//TWBR = 12;	//400khz 의미
 }
+
 void I2C_Start(void)
 {
 	TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN);		//Send START condition
 	while (!(TWCR & (1<<TWINT))) ;					//Wait for TWINT flag set.
 													//This indicates that the START condition has been transmitted
 }
+
 void I2C_TxData(uint8_t data)
 {
 	TWDR = data;						//write bit = 0, SLA_W; SLA_W = slave dev 주소 +write, 1byte:dev주소+r/w  //lcd 주소
@@ -27,10 +29,12 @@ void I2C_TxData(uint8_t data)
 	while (!(TWCR & (1<<TWINT))) ;		//Wait for TWINT flag set. This indicates that the
 										//SLA+W has been transmitted, and ACK/NACK has been received.
 }
+
 void I2C_Stop(void)
 {
 	TWCR = (1<<TWINT)|(1<<TWEN)| (1<<TWSTO);		//Transmit STOP condition
 }
+
 void I2C_TxByte(uint8_t devAddr_RW, uint8_t data)
 {
 	/* I2C inteface를 이용한 1byte 전송 코드 */

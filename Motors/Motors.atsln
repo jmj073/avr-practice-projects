@@ -7,6 +7,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ServoMotor", "ServoMotor\Se
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "StepMotor", "StepMotor\StepMotor.cproj", "{90D83DCF-0BEA-4FAE-91EE-64C22082924F}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "DCMotor", "DCMotor\DCMotor.cproj", "{5DE17CD2-F4CA-4BDF-8AB3-1256E289CFDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -21,6 +23,10 @@ Global
 		{90D83DCF-0BEA-4FAE-91EE-64C22082924F}.Debug|AVR.Build.0 = Debug|AVR
 		{90D83DCF-0BEA-4FAE-91EE-64C22082924F}.Release|AVR.ActiveCfg = Release|AVR
 		{90D83DCF-0BEA-4FAE-91EE-64C22082924F}.Release|AVR.Build.0 = Release|AVR
+		{5DE17CD2-F4CA-4BDF-8AB3-1256E289CFDE}.Debug|AVR.ActiveCfg = Debug|AVR
+		{5DE17CD2-F4CA-4BDF-8AB3-1256E289CFDE}.Debug|AVR.Build.0 = Debug|AVR
+		{5DE17CD2-F4CA-4BDF-8AB3-1256E289CFDE}.Release|AVR.ActiveCfg = Release|AVR
+		{5DE17CD2-F4CA-4BDF-8AB3-1256E289CFDE}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

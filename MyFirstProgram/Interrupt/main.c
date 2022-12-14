@@ -12,40 +12,77 @@
 #include <util/delay.h>
 #include <stdio.h>
 
-#include <UART.h>
-#include <my_util.h>
+//#include <UART.h>
+//#include <my_util.h>
+
+// 레벨 트리거 외부 인터럽트================================================
+
+/*
+nop 0개: 인터럽트 2번마다 메인 루프 토글 실행됨
+nop 2개: 인터럽트 3번마다 메인 루프 토글 실행됨
+nop 3개: 인터럽트 4번마다 메인 루프 토글 실행됨
+*/
+
+ISR(INT0_vect)
+{
+	PORTB ^= 0x03;
+	_delay_ms(500);
+}
+
+int main()
+{
+	DDRB = 0xFF;
+	PORTB = 0xFE;
+	PORTD = 0x01;
+	
+	EIMSK |= _BV(INT0);
+	
+	sei();
+	
+	while (1) {
+		uint8_t old = SREG;
+		cli();
+		PORTB ^= 0x04;
+		SREG = old;
+		//__asm__ __volatile__ (
+			//"nop\r\n"
+			//"nop\r\n"
+		//);
+	}
+}
 
 // 인터럽트를 통한 LED 제어3================================================
 
 //FILE OUTPUT = FDEV_SETUP_STREAM(UART1_transmit, NULL, _FDEV_SETUP_WRITE);
 //FILE INPUT = FDEV_SETUP_STREAM(NULL, UART1_receive, _FDEV_SETUP_READ);
 
-volatile uint8_t flag;
-
-ISR(INT0_vect) {
-	flag ^= 1;
-}
-
-int main() {
-	//stdout = &OUTPUT;
-	//stdin = &INPUT;
-	//UART1_init();
-	
-	DDRB = 0xFF; // OUTPUT: LEDs
-	PORTD = 0x01; // pull-up
-	
-	EIMSK |= nth(INT0); // enable INT0 & INT1
-	// fall(누를때)
-	EICRA |= nth(ISC01);
-	sei();
-	
-	PORTB = 0x01;
-	
-	loop {
-		PORTB = flag ? rrs(PORTB, 1) : lrs(PORTB, 1);
-		_delay_ms(500);
-	}
-}
+//volatile uint8_t flag;
+//
+//ISR(INT0_vect) {
+	//flag ^= 1;
+//}
+//
+//int main() {
+	////stdout = &OUTPUT;
+	////stdin = &INPUT;
+	////UART1_init();
+	//
+	//DDRB = 0xFF; // OUTPUT: LEDs
+	//PORTD = 0x01; // pull-up
+	//
+	//EICRA |= nth(ISC01);
+	//EIFR = _BV(INTF0);
+	//EIMSK |= nth(INT0); // enable INT0 & INT1
+	//// fall(누를때)
+	//sei();
+	//
+	//PORTB = 0x01;
+	//
+	//loop {
+		//PORTB = flag ? rrs(PORTB, 1) : lrs(PORTB, 1);
+		//_delay_ms(500);
+	//}
+//}
 
 //// 인터럽트를 통한 LED 제어2================================================
 //
