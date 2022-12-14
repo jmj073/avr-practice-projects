@@ -44,7 +44,7 @@ void ultrasonic_init(void) {
 
 void ultrasonic_trigger(void) {
 	ULTRASONIC_GPIO->port |= _BV(ULTRASONIC_TRIG);
-	_delay_ms(2);
+	_delay_us(10);
 	ULTRASONIC_GPIO->port &= ~_BV(ULTRASONIC_TRIG);
 
 	DATA_READY = 0;
